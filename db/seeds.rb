@@ -14,3 +14,15 @@
   )
 end
 puts "Done!"
+
+Movie.create(
+  "title": "The Emperor's New Groove",
+  "year": 2000,
+  "plot": "Emperor Kuzco is turned into a llama by his ex-administrator Yzma, and must now regain his throne with the help of Pacha, the gentle llama herder.",
+)
+
+Movie.create(
+  "title": "Shrek",
+  "year": 2001,
+  "plot": "A mean lord exiles fairytale creatures to the swamp of a grumpy ogre, who must go on a quest and rescue a princess for the lord in order to get his land back.",
+)
