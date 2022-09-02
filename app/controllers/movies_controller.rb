@@ -6,7 +6,7 @@ class MoviesController < ApplicationController
   end
 
   def show
-    movie = Movie.find_by(id: params["id"])
+    movie = Movie.find(params["id"])
 
     render json: movie.as_json
   end
