@@ -1,3 +1,34 @@
+### Actors Index Action
+GET http://localhost:3000/actors.json
+
+### Actos Show Action
+GET http://localhost:3000/actors/10.json
+
+### Actors Create Action
+POST  http://localhost:3000/actors.json
+Content-Type: application/json
+
+{
+  "first_name": "Anybody",
+  "last_name": "Something",
+  "known_for": "a thing"
+}
+
+### Actors Update Action
+PATCH  http://localhost:3000/actors/28.json
+Content-Type: application/json
+
+{
+  "first_name": "elijah",
+  "last_name": "woods",
+  "known_for": "lord of the flies"
+}
+
+### Actors Destroy Action
+DELETE  http://localhost:3000/actors/20.json
+
+# -----------------------------------------------
+
 ### Movies Index Action
 GET http://localhost:3000/movies.json
 
