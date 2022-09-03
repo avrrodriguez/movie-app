@@ -3,3 +3,24 @@ GET http://localhost:3000/movies.json
 
 ### Movies Show Action
 GET http://localhost:3000/movies/2.json
+
+### Movies Create Action
+POST http://localhost:3000/movies.json
+Content-Type: application/json
+
+{
+"title": "test title 2",
+"year": 2000,
+"plot": "test plot"
+}
+
+### Movies Update Action
+PATCH http://localhost:3000/movies/6.json 
+Content-Type: application/json
+
+{
+"title": "not test title"
+}
+
+### Movies Delete Action
+DELETE http://localhost:3000/movies/5.json 
