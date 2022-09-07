@@ -12,14 +12,18 @@ class MoviesController < ApplicationController
   end
 
   def create
-    movie = Movie.create(
+    movie = Movie.new(
       "title": params["title"],
       "year": params["year"],
       "plot": params["plot"],
       "director": params["director"],
       "english": params["english"],
     )
-    render json: movie.as_json
+    if actor.save
+      render json: movie.as_json
+    else
+      render json: { errors: movie.errors.full_messages }, status: :unprocessable_entity
+    end
   end
 
   def update
@@ -29,9 +33,12 @@ class MoviesController < ApplicationController
     movie.plot = params["plot"] || movie.plot
     movie.director = params["director"] || movie.director
     movie.english = params["english"]
-    movie.save
 
-    render json: movie.as_json
+    if movie.save
+      render json: movie.as_json
+    else
+      render json: { errors: movie.errors.full_messages }, status: :unprocessable_entity
+    end
   end
 
   def destroy
