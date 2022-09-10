@@ -1,4 +1,6 @@
 @user = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjI4NTYwNjd9.bolxa6fNnlHWLTushJK-QWx2RijeEaEFQdtOvSk7070
+
+@admin = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NjI4NTc1NDB9.Jo2twib_y0YL3IsRlAR6roI5l98RV1R8uTBEpU7lMjw
 # {{user}} is how to interpolate
 
 ### Actors Index Action
@@ -19,6 +21,7 @@ Content-Type: application/json
 
 ### Actors Update Action
 PATCH  http://localhost:3000/actors/28.json
+Authorization: Bearer {{user}}
 Content-Type: application/json
 
 {
@@ -50,10 +53,12 @@ Content-Type: application/json
 
 ### Movies Update Action
 PATCH http://localhost:3000/movies/6.json 
+Authorization: Bearer {{admin}}
 Content-Type: application/json
 
 {
-"title": "not test title"
+"title": "not title",
+"plot": "adas adnaksjn adknaskdj moiove woeijwo asdbh"
 }
 
 ### Movies Delete Action
@@ -75,6 +80,6 @@ POST http://localhost:3000/sessions.json
 Content-Type: application/json
 
 {
-  "email": "bob@test.com",
+  "email": "Sedol@test.com",
   "password": "password"
 }
