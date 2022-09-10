@@ -1,3 +1,6 @@
+@user = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjI4NTYwNjd9.bolxa6fNnlHWLTushJK-QWx2RijeEaEFQdtOvSk7070
+# {{user}} is how to interpolate
+
 ### Actors Index Action
 GET http://localhost:3000/actors.json
 
@@ -55,3 +58,23 @@ Content-Type: application/json
 
 ### Movies Delete Action
 DELETE http://localhost:3000/movies/5.json 
+
+### User Create Action
+POST http://localhost:3000/users.json
+Content-Type: application/json
+
+{
+  "name": "Sedol",
+  "email": "Sedol@test.com",
+  "password": "password",
+  "password_confirmation": "password"
+}
+
+### Sessions Create Action
+POST http://localhost:3000/sessions.json
+Content-Type: application/json
+
+{
+  "email": "bob@test.com",
+  "password": "password"
+}
