@@ -64,6 +64,15 @@ Content-Type: application/json
 ### Movies Delete Action
 DELETE http://localhost:3000/movies/5.json 
 
+### Movie Genres Create Action
+POST http://localhost:3000/movie_genres.json
+Content-Type: application/json
+
+{
+  "genre_id": 2,
+  "movie_id": 4
+}
+
 ### User Create Action
 POST http://localhost:3000/users.json
 Content-Type: application/json
